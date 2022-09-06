@@ -1,0 +1,9 @@
+-
+   name: this is my first play book.
+   hosts: webs, dbs
+   tasks:
+     -  name: "first task"
+        command: touch /tmp/task/first_task.txt
+        ignore_errors: true 
+     -  name: "second task"
+        command: touch /tmp/second.txt

@@ -1,0 +1,5 @@
+1. yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+2. yum install ansible
+3. ansible --version
+4. ssh-keygen
+4. ssh-copy-id -i ~/.ssh/id_rsa.pub <user-id>@<x-host>

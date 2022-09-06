@@ -1,0 +1,88 @@
+// https://www.simplilearn.com/tutorials/ansible-tutorial/what-is-ansible
+
+#Ansible is an open-source automation tool used for IT tasks such as configuration management, application deployment, intraservice orchestration, and provisioning.(Application Deployment + 
+Configuration Management + Continuous Delivery)
+Developer: Red Hat Software
+
+#Advantages of Ansible
+Free
+Very simple to set up and use:
+Powerful
+Flexible
+Agentless
+Efficient
+
+
+#Ansible’s Features and Capabilities
+Configuration Management
+Application Deployment
+Orchestration
+Security and Compliance
+Cloud Provisioning
+
+
+#Ansible Architecture
+Modules:- Modules are like small programs that Ansible pushes out from a control machine to all the nodes or remote hosts. 
+The modules are executed using playbooks (see below), and they control things such as services, packages, and files, Ansible provides more than 450 modules for everyday tasks.
+
+Plugins:- As you probably already know from many other tools and platforms, plugins are extra pieces of code that augment functionality. Ansible comes with a number of its plugins, 
+but you can write your own as well. Action, cache, and callback plugins are three examples.
+
+Inventories:-  All the machines you’re using with Ansible (the control machine plus nodes) are listed in a single simple file, along with their IP addresses, databases, servers, and so on.
+
+Playbooks:- Ansible playbooks are like instruction manuals for tasks.They are simple files written in YAML,which stands for YAML Ain’t Markup Language, a human-readable data serialization
+language, Each playbook is composed of one or multiple plays, and the goal of a play is to map a group of hosts to well-defined roles, represented by tasks.
+
+APIs:- Various APIs (application programming interfaces) are available so you can extend Ansible’s connection types (meaning more than just SSH for transport), callbacks and more
+
+
+##What is Ansible Tower
+Ansible Tower is Red Hat’s commercial web-based solution for managing Ansible. Its best-known feature is an easy-to-use UI (user interface) for managing configurations and deployments, which
+is a significant improvement over the original UI. Ansible Tower contains the essential features of Ansible, especially those that are easier to see in a graphical format rather than a 
+text-based format. It is free for up to 10 node
+
+
+#Advantages of Using Ansible With Docker
+Portability/Flexibility:- The fact that Ansible playbooks are portable, meaning they can be used anywhere, as well as repeatable, can save you a lot of time and effort.
+For example, if you use a pure Dockerfile to build a container, then you can reproduce the application only in a Docker container. If you use an Ansible playbook to create
+a container, on the other hand, then you can reproduce the application in Docker, on the cloud, and so on
+
+Auditability:- Even if you create containers, you’ll still need to monitor code and track vulnerabilities. Using Ansible with Docker, you can easily track who has deployed
+which containers as well as what’s in all of the containers, and know that you can rebuild any containers as necessary
+
+Management of Entire Environments:- With Ansible, you already know you can manage your Docker containers. But you can also maintain the environment that all the containers are in, even in highly
+complex environments.Ansible can monitor containers and non-containers at the same time,which is essential because containerized applications often need to “talk” with noncontainerized applications.
+
+Similar Syntax:- As mentioned, Ansible used YAML files for its playbooks. Docker uses its non-YAML scripts, but they are very similar and can do almost the same things. 
+
+
+##How to Use Ansible With Docker
+First, let’s talk about what Docker is. Docker is a Linux-based open-source platform used to help automate the deployment of applications within software containers.
+(A container is a unit of software in which code and all of its dependencies are packaged together; setting up software this way helps an application run reliably and 
+consistently in multiple computing environments.) Now let’s delve further into using Ansible with Docker. As mentioned, you can use Ansible to automate Docker and to 
+build and deploy Docker containers. First, you’ll need to have Docker SDK for Python installed. After you install the tools, examine the last Ansible rolebdd, and then
+perform deployment using the blue-green technique. Don’t forget to test! Run both integration and stress tests; otherwise, your application may not run correctly. 
+Make sure you have the newest version of the container, run the old application at the same time as the new one, run tests after deployment, do the notifying about the
+latest release, redo the configuration to point to the new release, and then finally, stop the previous (old) version. Once the application has passed all the tests, and
+the configuration is set to the new application, here’s how you get Ansible and Docker to work together. First, make sure you have Git, Vagrant, and VirtualBox installed.
+Next, create a Vagrant file that has an Ubuntu virtual machine. Then run your Ansible playbook—this will install and configure everything. Then you can deploy your application.
+Remember that some of the components have to be downloaded, so this may add the time the first time you deploy.
+
+
+## Managing Docker Containers Using Ansible Modules
+Ansible has several modules for managing Docker; a few of these are docker_image, docker_container, and docker_service. Docker_image is used for building, loading, or removing images 
+and also for tagging and archiving images. Docker_container lets you create and destroy Docker containers, as well as start, stop, and update them. Docker_service assists in starting, 
+shutting down, and scaling services.
+
+
+
+
+
+
+
+
+
+
+
+
+

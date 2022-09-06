@@ -1,0 +1,16 @@
+-
+   name: "this is my first play book"
+   hosts: database
+   tasks:
+     -  name: "add user"
+        user:
+          name=akki
+     -  name: "copy file"
+        copy:
+          src=index.html
+          dest=/home/akki/
+     -  name: update index.html owner group mode
+        file:
+          path=/home/akki/ 
+       	  owner=akki
+          mode=0666

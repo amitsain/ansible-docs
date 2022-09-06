@@ -1,0 +1,6 @@
+https://docs.ansible.com/ansible/2.8/user_guide/intro_adhoc.html#introduction-to-ad-hoc-commands
+https://docs.ansible.com/ansible/latest/user_guide/command_line_tools.html
+
+
+
+

@@ -1,0 +1,11 @@
+-
+   name: this is my first play book.
+   hosts: webs
+   tasks:
+     -  name: "installing  package"
+        yum:
+          name: "{{ item }}"
+          state: absent
+        with_items:
+          - vsftpd
+          - bind

@@ -1,0 +1,8 @@
+#https://cloudstack.ninja/zama-ques/using-ansible-loop-to-create-multiple-users-undefined-error/
+---
+- hosts: webserver1
+  become: true
+  vars_files:
+  - user_detail.yaml
+  tasks:
+  - include: user_task.yaml

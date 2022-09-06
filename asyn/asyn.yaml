@@ -1,0 +1,11 @@
+-
+   name: "my first async playbook"
+   hosts: webs
+   tasks:
+     -  name: "sleep for 60 sec"
+        command: sleep 60
+        async: 15
+        poll: 0
+        
+     -  name: "second task"
+        command: touch /tmp/second_task.txt

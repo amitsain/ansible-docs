@@ -1,0 +1,13 @@
+---
+- hosts: webserver1
+  become: true
+  vars:
+    ansible_become_pass: edureka	
+  tasks: 
+    - name: install nginx
+      yum:  pkg=nginx  state=installed
+      notify:
+        - start nginx
+  handlers: 
+    - name: start nginx
+      service: name=nginx state=started

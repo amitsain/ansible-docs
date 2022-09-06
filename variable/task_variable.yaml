@@ -1,0 +1,8 @@
+-
+   name: "file including"
+   hosts: webs
+   vars_files:
+     - variable.yaml
+   tasks:
+     - include: task.yaml
+

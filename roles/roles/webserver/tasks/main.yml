@@ -1,0 +1,6 @@
+---
+# tasks file for webserver
+-  name: "task1"
+   command: touch /tmp/web/web_play_2_task_1.txt
+-  name: "task2"
+   command: touch /tmp/web/web_play_2_task_2.txt

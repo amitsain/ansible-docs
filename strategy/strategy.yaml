@@ -1,0 +1,9 @@
+-
+   name: this is my first play book.
+   hosts: webs, dbs
+   tasks:
+     -  name: "install httpd"
+        yum:  name="httpd" state="installed"
+
+     -  name: "second task"
+        command: touch /tmp/linear_strategy.txt

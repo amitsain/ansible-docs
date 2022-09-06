@@ -1,0 +1,9 @@
+-
+   name: this is my first play book.
+   hosts: webs
+   vars:
+     age: 18
+   tasks:
+     -  name: "create a dummy file and webs"
+        command: touch /tmp/18.txt
+        when: age >= 16

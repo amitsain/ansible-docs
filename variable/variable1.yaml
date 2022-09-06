@@ -1,0 +1,10 @@
+-
+   name: this is my first play book.
+   hosts: webs
+   vars:
+     servicename=httpd
+   tasks:
+     -  name: "creating file using variable"
+        service:
+          name= "{{ servicename }}"
+          state=started

@@ -1,0 +1,5 @@
+- name: more complex items to add several users
+  user:
+   name: "{{ item.name }}"
+   state: present
+  with_items: "{{ user_details }}"

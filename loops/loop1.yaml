@@ -1,0 +1,12 @@
+-
+   name: this is my first play book.
+   hosts: webs
+   tasks:
+     -  name: "installing mysql package"
+        yum:
+          name: mysql
+          state: present
+     -  name: "installing tree package"
+        yum:
+          name: tree
+          state: present

@@ -1,0 +1,10 @@
+---
+- name: this is my first play book.
+  hosts: database
+  tasks:
+    - name: "create a dummy file on database"
+      user:
+      name="akki"
+      password=akki
+      state=present
+

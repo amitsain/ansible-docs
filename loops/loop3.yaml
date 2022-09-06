@@ -1,0 +1,13 @@
+-
+   name: this is my first play book.
+   hosts: webs
+   vars:
+     pkg:
+       - bind
+       - tree
+   tasks:
+     -  name: "installing  package"
+        yum:
+          name: "{{ item }}"
+          state: present
+        with_items: "{{ pkg }}"

@@ -1,0 +1,7 @@
+-
+   name: "webserver playbook"
+   hosts: webs
+   roles:
+     - webserver
+     - php
+     - database 

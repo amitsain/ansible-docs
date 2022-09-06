@@ -1,0 +1,16 @@
+-
+   name: this is my first play book.
+   hosts: webs
+   vars_files:
+     - variable.yaml
+   tasks:
+     -  name: "task1"
+        command: touch /tmp/{{ var1 }}.txt
+     -  name: "task2"
+        command: touch /tmp/{{ var2 }}.txt
+     -  name: "task2"
+        command: touch /tmp/{{ var4 }}.txt
+     -  name: "task3"
+        command: touch /tmp/{{ var5 }}.txt
+     -  name: "task4"
+        command: touch /tmp/{{ var5 }}.txt
